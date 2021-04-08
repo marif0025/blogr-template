@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:ital,wght@0,500;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-text-primary: hsl(356, 100%, 66%); 
+    --clr-text-light: hsl(0, 0%, 100%);
+    --clr-text-dark: hsl(207, 13%, 34%);
+    --clr-text-footer: hsl(240, 2%, 79%);
+    --clr-bg-footer:  hsl(240, 10%, 16%);
+    --clr-blue: hsl(208, 49%, 24%); 
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    font-size: 1.6rem;
+    color: var(--clr-text-dark);
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    @include media(min, 768) {
+        padding: 0 40px;
+    }
+}
+
+.md-none {
+    @include media(max, 767) {
+        display: none;
+    }
+}
+
+.dd-none {
+    @include media(min, 768) {
+        display: none;
+    }
+}

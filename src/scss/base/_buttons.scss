@@ -1,0 +1,37 @@
+.btn {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 1.5rem 2.4rem 1.4rem;
+    border: 1px solid transparent;
+    border-radius: 24px;
+    transition: all .25s ease-in-out;
+
+    @include media(min, 768) {
+        padding: 1.5rem 4rem 1.4rem;
+    }
+
+    &-primary {
+        @extend .btn;
+        border-color: var(--clr-text-light);
+        background-color: var(--clr-text-light);
+        color: hsl(356, 100%, 66%);
+
+        &:hover {
+            border-color: hsl(355, 100%, 74%);
+            background-color: hsl(355, 100%, 74%);
+            color: var(--clr-text-light)
+        }
+    }
+
+    &-transparent {
+        @extend .btn;
+        border-color: var(--clr-text-light);
+        color: var(--clr-text-light);
+
+        &:hover {
+            background-color: var(--clr-text-light);
+            color: hsl(356, 100%, 66%);
+        }
+    }
+}

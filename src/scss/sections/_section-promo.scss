@@ -1,0 +1,87 @@
+.section-promo {
+    padding: 20rem 0 0;
+
+    @include media(min, 769) {
+        padding: 10rem 0;
+    }
+}
+
+.promo {
+    &--bg {
+        position: relative;
+        background-image: url("data:image/svg+xml,%0A%3Csvg width='1014' height='1018' xmlns='http://www.w3.org/2000/svg'%3E%3Cg transform='matrix(1 0 0 -1 0 1018)' fill='none' fill-rule='evenodd'%3E%3Crect fill='%233E4062' x='213' y='214' width='588' height='590' rx='294'/%3E%3Crect stroke='%23878D92' opacity='.5' x='.5' y='.5' width='1013' height='1017' rx='506.5'/%3E%3Crect stroke='%23878D92' x='170.5' y='171.5' width='673' height='675' rx='336.5'/%3E%3C/g%3E%3C/svg%3E");
+        background-size: 160%;
+        background-repeat: no-repeat;
+        background-position: center -220px;
+        border-top-right-radius: 100px;
+
+        @include media(min, 601) {
+            background-size: 100%;
+        }
+
+        @include media(min, 769) {
+            background-size: 51%;
+            background-position: 80px -460px;
+            padding: 4rem 0;
+        }
+
+        @include media(min, 1280) {
+            padding: 0;
+        }
+
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgb(44,45,63);
+            background: linear-gradient(90deg, rgba(44,45,63,1) 0%, rgba(63,65,100,1) 100%);
+            z-index: -1;
+            border-bottom-left-radius: 14rem;
+
+            @include media(max, 768) {
+                border-top-right-radius: 10rem;
+            }
+        }
+    }
+
+    &--wrap {
+        display: flex;
+        align-items: center;
+        color: var(--clr-text-light);
+        gap: 4rem;
+
+        @include media(max, 768) {
+            flex-direction: column;
+            padding-bottom: 14rem;
+            text-align: center;
+        }
+    }
+
+    &--image {
+        flex-basis: 50%;
+        margin: -130px 0 0;
+
+        @include media(min, 769) {
+            margin: -70px 0 -110px;
+        }
+    }
+
+    &--details {
+        flex-basis: 50%;
+    }
+
+    &--title {
+        font-size: 4rem;
+        font-weight: 600;
+        margin-bottom: 3rem;
+    }
+
+    &--desc {
+        font-size: 1.6rem;
+        line-height: 1.9;
+    }
+}

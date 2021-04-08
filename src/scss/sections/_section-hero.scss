@@ -1,0 +1,62 @@
+.section-hero {
+    padding-top: 5.4rem;
+    min-height: 600px;
+    position: relative;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='3175' height='3174'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='.639%25' x2='99.361%25' y1='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23FF8F71'/%3E%3Cstop offset='100%25' stop-color='%23FF3E55'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23a)' fill-rule='evenodd' d='M1973.15 1193.185v788.41h-786.766v-688.41c0-55.228 44.772-100 100-100h686.767zm-1310.445-1.171c217.26 0 393.383 176.124 393.383 393.383v1.645c0 217.26-176.123 393.383-393.383 393.383S269.322 1804.3 269.322 1587.042v-1.645c0-217.26 176.124-393.383 393.383-393.383zm392.212-926.418v688.41c0 55.23-44.771 100-100 100H268.151v-788.41h786.766zm918.234 0v788.41h-686.767c-55.228 0-100-44.771-100-100v-688.41h786.767z' transform='rotate(22 162.072 2556.164)'/%3E%3C/svg%3E");
+    background-position: left;
+    background-size: auto;
+    background-repeat: no-repeat;
+
+    @include media(min, 768) {
+        padding-top: 6.4rem;
+    }
+
+    &::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(255,143,112);
+        background: linear-gradient(90deg,  hsl(13, 100%, 72%) 0%, hsl(353, 100%, 62%) 100%);
+        border-bottom-left-radius: 140px;
+        z-index: -1;
+    }
+}
+
+.hero {
+    &--title {
+        font-size: 3.8rem;
+        line-height: 1.3;
+        font-weight: 600;
+        text-align: center;
+        color: var(--clr-text-light);
+        margin-top: 8rem;
+
+        @include media(min, 768) {
+            font-size: 4.8rem;
+            margin-top: 13rem;
+        }
+
+        &::first-letter {
+            text-transform: capitalize;
+        }
+    }
+
+    &--desc {
+        margin-top: 1.2rem;
+        font-size: 1.8rem;
+        text-align: center;
+        color: var(--clr-text-light);
+    }
+
+    &--cta {
+        margin-top: 4.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+    }
+}
