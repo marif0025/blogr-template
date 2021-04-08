@@ -7,6 +7,7 @@
         const clickOutSideMenu = target.closest('.submenu') === null
 
         if (target.classList.contains('menu-link')) {
+            e.preventDefault()
             const submenuParent = <HTMLElement>target.closest('.has-submenu')
             if (!submenuParent) { return }
 

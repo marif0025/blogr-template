@@ -15,7 +15,10 @@
 
     &--logo {
         flex-basis: 100%;
-        margin-bottom: 6rem;
+        
+        @include media(max, 767) {
+            margin-bottom: 6rem;
+        }
 
         img {
             max-width: 10rem;
@@ -24,7 +27,14 @@
 
     &--menu {
         width: 100%;
-        margin-bottom: 6rem;
+
+        @include media(max, 767) {
+            margin-bottom: 6rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
 
         &:last-child {
             margin-bottom: 0;
